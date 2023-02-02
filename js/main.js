@@ -48,14 +48,14 @@ function generate() {
         }
         // ----------------------
         // poi per aggiungere le"bombe" vado a mettere questi numeri nella griglia trasformandoli in elementi
-        rednumbers.document.createElement("div");
-        rednumbers.innerHTML = numeridiversi[i];
+        const rednumbers = document.createElement("div");
+        rednumbers.innerHTML = numeridiversi;
         rednumbers.classList.add("red");
         numeridiversi.append(rednumbers);
         rednumbers.addEventListener(
             "click",
             function () {
-                if (numeridiversi == listitem) {
+                if (numeridiversi == listitem[i]) {
                     numeridiversi.classList.add("red");
                 }
             }
