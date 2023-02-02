@@ -7,7 +7,7 @@ bottone.addEventListener(
 )
 const listtowrite = document.getElementById("big-square");
 // assegno numeri in una funzione per 100
-generate(listitem, 1);
+// generate(listitem, 1);
 function generate() {
     // assegno i valori
     const whitelist = [];
@@ -37,5 +37,17 @@ function generate() {
             }
 
         )
+    }
+}
+// Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
+//  Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell'array delle bombe non potranno esserci due numeri uguali.
+// genero 16 numeri casuali non uguali
+// const numeridiversi = [];
+const numeridiversi = []
+for (let i = 0; numeridiversi.length < 16; i++) {
+    let numerirandom = Math.floor(Math.random() * 100) + 1;
+    console.log(numeridiversi)
+    if numeridiversi.includes(numerirandom){
+        numeridiversi.push(numerirandom);
     }
 }
