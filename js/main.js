@@ -47,7 +47,7 @@ const numeridiversi = []
 for (let i = 0; numeridiversi.length < 16; i++) {
     let numerirandom = Math.floor(Math.random() * 100) + 1;
     console.log(numeridiversi)
-    if numeridiversi.includes(numerirandom){
+    if numeridiversi.includes(numerirandom); {
         numeridiversi.push(numerirandom);
     }
 }
