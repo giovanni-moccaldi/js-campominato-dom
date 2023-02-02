@@ -6,6 +6,8 @@ bottone.addEventListener(
     }
 )
 const listtowrite = document.getElementById("big-square");
+const rednumbers = document.getElementById("big-square");
+
 // assegno numeri in una funzione per 100
 // generate(listitem, 1);
 function generate() {
@@ -14,11 +16,8 @@ function generate() {
     for (let i = 1; i <= 100; i++) {
         whitelist.push(i);
         // console.log(whitelist);
-
-
     }
     listtowrite.innerHTML = "";
-
     for (let i = 0; i < 100; i++) {
         // creo un div per mettere i numeri
         const listitem = document.createElement("div");
@@ -38,17 +37,30 @@ function generate() {
 
         )
     }
-}
-// Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe.
-//  Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell'array delle bombe non potranno esserci due numeri uguali.
-// genero 16 numeri casuali non uguali
-
-const numeridiversi = []
-while (numeridiversi.length < 16) {
-    let numerirandom = Math.floor(Math.random() * 100) + 1;
-    console.log(numeridiversi)
-    if (numeridiversi.includes.numerirandom); {
-        numeridiversi.push(numerirandom);
+    // vado a generare 16 numeri casuali per il secondo esercizio e diversi tra loro
+    const numeridiversi = []
+    while (numeridiversi.length < 16) {
+        let numerirandom = Math.floor(Math.random() * 100) + 1
+        console.log(numeridiversi)
+        if (numeridiversi.includes(numerirandom));
+        {
+            numeridiversi.push(numerirandom);
+        }
+        // ----------------------
+        // poi per aggiungere le"bombe" vado a mettere questi numeri nella griglia trasformandoli in elementi
+        rednumbers.document.createElement("div");
+        rednumbers.innerHTML = numeridiversi[i];
+        rednumbers.classList.add("red");
+        numeridiversi.append(rednumbers);
+        rednumbers.addEventListener(
+            "click",
+            function () {
+                if (numeridiversi == listitem) {
+                    numeridiversi.classList.add("red");
+                }
+            }
+        )
     }
+    console.log(numeridiversi)
+
 }
-console.log(numeridiversi)
