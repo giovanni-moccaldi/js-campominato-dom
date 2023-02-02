@@ -7,6 +7,10 @@ bottone.addEventListener(
 )
 const listtowrite = document.getElementById("big-square");
 const rednumbers = document.getElementById("big-square");
+const bombe = ["13", "34", "45", "56"]
+
+console.log(parseInt(bombe.length));
+
 
 // assegno numeri in una funzione per 100
 // generate(listitem, 1);
@@ -26,41 +30,52 @@ function generate() {
         // aggiungo una classe
         listitem.classList.add("smallsquare");
         listtowrite.append(listitem);
-
+        parseInt(bombe);
         // aggiungo un click
         listitem.addEventListener(
             "click",
+
             function () {
-                this.classList.toggle("azzurro");
-                console.log(whitelist[i])
+                if (listitem[i] != bombe[i]); {
+                    listitem.classList.add("red");
+
+                }
+                if (listitem == bombe) {
+                    listitem.classList.add("azzurro");
+
+
+                    // this.classList.toggle("azzurro");
+                    // console.log(whitelist[i])
+                }
+
             }
 
         )
     }
-    // vado a generare 16 numeri casuali per il secondo esercizio e diversi tra loro
-    const numeridiversi = []
-    while (numeridiversi.length < 16) {
-        let numerirandom = Math.floor(Math.random() * 100) + 1
-        console.log(numeridiversi)
-        if (numeridiversi.includes(numerirandom));
-        {
-            numeridiversi.push(numerirandom);
-        }
-        // ----------------------
-        // poi per aggiungere le"bombe" vado a mettere questi numeri nella griglia trasformandoli in elementi
-        const rednumbers = document.createElement("div");
-        rednumbers.innerHTML = numeridiversi;
-        rednumbers.classList.add("red");
-        numeridiversi.append(rednumbers);
-        rednumbers.addEventListener(
-            "click",
-            function () {
-                if (numeridiversi == listitem[i]) {
-                    numeridiversi.classList.add("red");
-                }
-            }
-        )
-    }
-    console.log(numeridiversi)
+    //     // vado a generare 16 numeri casuali per il secondo esercizio e diversi tra loro
+    //     const numeridiversi = []
+    //     while (numeridiversi.length < 16) {
+    //         let numerirandom = Math.floor(Math.random() * 100) + 1
+    //         console.log(numeridiversi)
+    //         if (numeridiversi.includes(numerirandom));
+    //         {
+    //             numeridiversi.push(numerirandom);
+    //         }
+    //         // ----------------------
+    //         // poi per aggiungere le"bombe" vado a mettere questi numeri nella griglia trasformandoli in elementi
+    //         const rednumbers = document.createElement("div");
+    //         rednumbers.innerHTML = numeridiversi;
+    //         rednumbers.classList.add("red");
+    //         numeridiversi.append(rednumbers);
+    //         rednumbers.addEventListener(
+    //             "click",
+    //             function () {
+    //                 if (numeridiversi == listitem[i]) {
+    //                     numeridiversi.classList.add("red");
+    //                 }
+    //             }
+    //         )
+    //     }
+    //     console.log(numeridiversi)
 
 }
